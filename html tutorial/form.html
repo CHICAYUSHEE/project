@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    th {
+      border: 1px solid black;
+    }
+    td {
+      border: 1px solid black;
+      text-align: center;
+    }
+    form {
+      border: 1px solid black;
+      padding: 10px;
+    }
+</style>
+<body>
+      <h3>HTML Form - 1</h3>
+      <form action = "javascript:submitForm()" onSubmit = "return validate()">
+      <label for="dob" style="color: white">Enter DOB : </label>    
+      <input
+        type="date"
+        name="dob"
+        id="dob"
+        min="2023-01-01"
+        max="2025-01-01"
+      /><br /><br />  
+      <label for = "name">Enter Name: </label>
+      <input type = "text" name = "name" id = "name" required><br><br>
+      <label>Color:</label>
+      <input type="color" name /><br /><br />
+      <input type = "submit" name = "submit" value = "Submit">
+    </form>
+    <script>
+        function validate1() {
+        let validated = true;
+        let ele1 = document.getElementById("name");
+        let ele2 = document.getElementByID("color");
+        if (ele.value.length < 10) 
+        {
+          window.alert("name length must be greater than 10 characters");
+          validated = false;
+        } else {
+          validated = true;
+        }
+        // return validated;
+        if (validated === true) {
+          // window.alert("Form Submitted");
+          submitForm1();
+        }
+      }
+      function submitForm1() {
+        window.alert("Form Submitted");
+      }
+     
+      function submitForm() {
+        window.alert("Form Submitted")
+      }
+    </script>
+  </body>
+</html>
+</body>
+</html>
